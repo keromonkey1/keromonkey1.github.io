@@ -243,9 +243,9 @@
 		
 		function homepage() {
 			//for some reason, Menu needs to be created in a call back here, for it to work.
-			$('game').load('/template/home.html',function(){ 
+			$('game').load('template/home.html',function(){ 
 				createMenu(); 
-				$('#vid-holder').load('/template/video.html');
+				$('#vid-holder').load('template/video.html');
 				ts = $('#transitionScreen'); //becuase of mobile load-order...
 				menuSFX.currentTime=0;
 				//rebind these functions (for each of the home-page main menu options). 
