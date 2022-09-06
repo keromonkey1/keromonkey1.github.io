@@ -570,8 +570,8 @@
 					time:       { value: 1.0 },
 					resolution: { value: new THREE.Vector2() },
 					uvScale:    { value: new THREE.Vector2( 3.0, 1.0 ) },
-					texture1:   { value: textureLoader.load( "/images/cloud.png" ) },
-					texture2:   { value: textureLoader.load( "/images/lavatile.jpg" ) }
+					texture1:   { value: textureLoader.load( "./images/cloud.png" ) },
+					texture2:   { value: textureLoader.load( "./images/lavatile.jpg" ) }
 				};
 				uniforms.texture1.value.wrapS = uniforms.texture1.value.wrapT = THREE.RepeatWrapping;
 				uniforms.texture2.value.wrapS = uniforms.texture2.value.wrapT = THREE.RepeatWrapping;
@@ -705,46 +705,46 @@
 	
 	
 	<!-- Dias. -->
-	<a-cylinder color="white" height=".5" radius="1" position="0 1.45 -2" material="src:/images/pillar2.jpg; repeat: 40 40"></a-cylinder>
+	<a-cylinder color="white" height=".5" radius="1" position="0 1.45 -2" material="src:./images/pillar2.jpg; repeat: 40 40"></a-cylinder>
 	
 	<!-- Tall Pillars -->
-	<a-cylinder color="gray" height="200" segments-radial="8" position="-6 1.45 -5"  material="src:/images/pillar2.jpg; repeat: 20 20"></a-cylinder>
-	<a-cylinder color="white" height="200" segments-radial="8" position="6 1.45 -5" material="src:/images/pillar2.jpg; repeat: 20 20"></a-cylinder>
+	<a-cylinder color="gray" height="200" segments-radial="8" position="-6 1.45 -5"  material="src:./images/pillar2.jpg; repeat: 20 20"></a-cylinder>
+	<a-cylinder color="white" height="200" segments-radial="8" position="6 1.45 -5" material="src:./images/pillar2.jpg; repeat: 20 20"></a-cylinder>
 	
 	<!-- Black Hole -->
 	<!-- <a-sphere id="bblob" radius="70" rotation="90 0 0" position="0 170 -5" material="opacity:0.15; shader:noise; color:silver"> -->
 		 <!-- <a-animation attribute="rotation" from="0 00 0" to="0 360 0" dur="1000" repeat="indefinite" easing="linear"></a-animation> -->
 	<!-- </a-sphere> -->
 	
-	<a-circle id="bhole0" radius="90" rotation="90 0 0" position="0 140 -5" material="src:/images/5_blackhole.png;" metalness="1"></a-circle>
-	<a-circle id="bhole" radius="110" rotation="90 0 0" position="0 150 -5" material="src:/images/3_blackhole.png; opacity: .85"></a-circle>
-	<a-circle id="bhole2" radius="125" rotation="90 0 0" position="0 160 -5" material="src:/images/4_blackhole.png; opacity: .75"></a-circle>
-	<a-circle id="bhole3" radius="145" rotation="90 0 0" position="0 170 -5" material="src:/images/5_blackhole.png; opacity: .85"></a-circle>
+	<a-circle id="bhole0" radius="90" rotation="90 0 0" position="0 140 -5" material="src:./images/5_blackhole.png;" metalness="1"></a-circle>
+	<a-circle id="bhole" radius="110" rotation="90 0 0" position="0 150 -5" material="src:./images/3_blackhole.png; opacity: .85"></a-circle>
+	<a-circle id="bhole2" radius="125" rotation="90 0 0" position="0 160 -5" material="src:./images/4_blackhole.png; opacity: .75"></a-circle>
+	<a-circle id="bhole3" radius="145" rotation="90 0 0" position="0 170 -5" material="src:./images/5_blackhole.png; opacity: .85"></a-circle>
 	
 	<!-- Medallion Engravings -->
 	
 	<!-- Light Medal -->
 	<!-- <a-cylinder radius=".25" material="opacity:.5; side:double;" position="-2 2 -2"></a-cylinder> -->
 	<a-cylinder color="yellow" height="1" radius=".25" position="-2 1 -2"></a-cylinder>
-	<a-sphere class="med1" segments-height="53" radius=".25" material="opacity:.5; side:double;" src="/images/spinsilvergold.png" position="-2 2 -2"></a-sphere>
-	<a-cylinder id="lightmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:/images/light4.png;" metalness=".6" position="-2 2 -2"></a-cylinder>
+	<a-sphere class="med1" segments-height="53" radius=".25" material="opacity:.5; side:double;" src="./images/spinsilvergold.png" position="-2 2 -2"></a-sphere>
+	<a-cylinder id="lightmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:./images/light4.png;" metalness=".6" position="-2 2 -2"></a-cylinder>
 	
 	<!-- Shadow Medal -->
 	<a-cylinder color="purple" height="1" radius=".25" position="2 1 -2"></a-cylinder>
-	<a-sphere class="med2" segments-height="53" radius=".25" material="opacity:.75; metalness:.7; side:double" src="/images/spinsilverblack.png" position="2 2 -2"></a-sphere>
-	<a-cylinder id="shadowmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:/images/shadow4.png;" metalness="1" position="2 2 -2"></a-cylinder>
+	<a-sphere class="med2" segments-height="53" radius=".25" material="opacity:.75; metalness:.7; side:double" src="./images/spinsilverblack.png" position="2 2 -2"></a-sphere>
+	<a-cylinder id="shadowmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:./images/shadow4.png;" metalness="1" position="2 2 -2"></a-cylinder>
 	
 	<!-- Forest Medal -->
 	<!-- -1 1 0 > -1 2.17 0 > -1 2 0 -->
 	<a-cylinder color="green" height="1" radius=".25" position="0.2 1 .5"></a-cylinder>
-	<!-- <a-sphere class="med3" segments-height="53" radius=".25" material="opacity:0.99" src="/images/leaf.png" position="-1 2 0"></a-sphere> -->
-	<a-cylinder class="med3" segments-height="53" height="1.5" radius=".265" material="opacity:0.69; side:back;" src="/images/leaf3.png" position="0.2 2.2 .5"></a-cylinder>
-	<a-cylinder id="forestmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:/images/forest1.png;" metalness=".6" position="0.2 2 .5"></a-cylinder>
+	<!-- <a-sphere class="med3" segments-height="53" radius=".25" material="opacity:0.99" src="./images/leaf.png" position="-1 2 0"></a-sphere> -->
+	<a-cylinder class="med3" segments-height="53" height="1.5" radius=".265" material="opacity:0.69; side:back;" src="./images/leaf3.png" position="0.2 2.2 .5"></a-cylinder>
+	<a-cylinder id="forestmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:./images/forest1.png;" metalness=".6" position="0.2 2 .5"></a-cylinder>
 	
 	<!-- Spirit medal -->
 	<a-cylinder color="orange" height="1" radius=".25" position="-0.5 1 .5"></a-cylinder>
 	<a-sphere class="med4" segments-height="53" radius=".25" material="opacity:0.5; color: orange" position="-0.5 2 .5"></a-sphere>
-	<a-cylinder id="spiritmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:/images/spirit2.png;" metalness=".6" position="-0.5 2 0.5">
+	<a-cylinder id="spiritmedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:./images/spirit2.png;" metalness=".6" position="-0.5 2 0.5">
 	
 		<a-tetrahedron id="tet1" color="orange" radius=".053" detail="1" position="0 .31 0"  metalness="1"> </a-tetrahedron>
 		<a-tetrahedron id="tet2" color="orange" radius=".051" detail="1.5" position="0 0 0.31"  metalness=".8"> </a-tetrahedron>
@@ -766,9 +766,9 @@
 	<a-entity id="lava1" class="med5" position="-1 2.17 0" radius=".25" lavaorb></a-entity>
 	<a-entity id="lava2"  position="-1 2.17 0" radius=".25" lavaorb>
 				<!-- Medal in Front of Sphere: use for non-wire frame -->
-		<a-cylinder id="firemedal" radius=".09" height=".01" width=".005" rotation="90 0 0" material="opacity:1; side:double; src:/images/fire1.png;" metalness=".6" position="0 0 0"></a-cylinder>
+		<a-cylinder id="firemedal" radius=".09" height=".01" width=".005" rotation="90 0 0" material="opacity:1; side:double; src:./images/fire1.png;" metalness=".6" position="0 0 0"></a-cylinder>
 				<!-- Medal Inside Sphere: use for wireframe version -->
-				<!-- <a-cylinder id="firemedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:/images/fire1.png;" metalness=".6" position="0 0 0"></a-cylinder> -->
+				<!-- <a-cylinder id="firemedal" radius=".175" height=".02" width=".01" rotation="90 0 0" material="opacity:1; side:double; src:./images/fire1.png;" metalness=".6" position="0 0 0"></a-cylinder> -->
 	</a-entity>
 	
 	
@@ -778,7 +778,7 @@
 			<!-- Medal in Front of Sphere: use for non-wire frame -->
 			<a-cylinder id="watermedal" radius=".05" height=".01" width=".005" rotation="90 0 0" material="opacity:1; side:double; src:./images/water1.png;" metalness=".6" position="-0.3 -0.1 -0.09"></a-cylinder>
 			<!-- Medal Inside Sphere: use for wireframe version -->
-			<!-- <a-cylinder id="watermedal" radius=".14" height=".01" width=".005" rotation="90 0 0" material="opacity:1; side:double; src:/images/water1.png;" metalness=".6" position="0 0 0"></a-cylinder> -->
+			<!-- <a-cylinder id="watermedal" radius=".14" height=".01" width=".005" rotation="90 0 0" material="opacity:1; side:double; src:./images/water1.png;" metalness=".6" position="0 0 0"></a-cylinder> -->
 	</a-entity>
 	
 	<!-- >>>>>>>>>>>>>>>>>>>> -->
