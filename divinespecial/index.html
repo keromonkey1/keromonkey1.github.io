@@ -125,7 +125,7 @@
 		}
 		createMenu(); //call it once to create menu on main screen. 
 		
-		var cross = ['url(../images/cross/rockcross.png) top no-repeat', 'url(../images/cross/citycross.png) center no-repeat','url(../images/cross/gildcross.png) center no-repeat'];
+		var cross = ['url(./images/cross/rockcross.png) top no-repeat', 'url(./images/cross/citycross.png) center no-repeat','url(./images/cross/gildcross.png) center no-repeat'];
 		var c = Math.floor(Math.random()*cross.length);
 		
 		function menu() { //menu code for condensed nav bar.
@@ -137,7 +137,7 @@
 			if(nav.css('height')=='0px') {
 				if(osName=='windows') {
 					$('#menuZone').css('height','100%');
-					nav.css({background: cross[c++]+', linear-gradient(45deg, hsla(30, 61%, 50%,.5) 30%, silver, rgba(255,255,255,.75)), url(../images/clouds1.jpg) center'});
+					nav.css({background: cross[c++]+', linear-gradient(45deg, hsla(30, 61%, 50%,.5) 30%, silver, rgba(255,255,255,.75)), url(./images/clouds1.jpg) center'});
 					nav.animate({height:'540px'});
 				}
 				else { //mobile...
