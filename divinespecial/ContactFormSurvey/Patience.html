@@ -1,0 +1,87 @@
+<!doctype html>
+<header>
+	<link href="https://fonts.googleapis.com/css?family=Lora|Oswald" rel="stylesheet">
+	<link href="decor.css" rel="stylesheet" type="text/css">
+</header>
+
+<body id="kitchen">
+	<h1>Team iNtuition <br /> CONTACT FORM</h1>
+	<div class="all">
+		<!-- <div class="description">Description</div> -->
+
+		<center>
+		<form class="formstuff" id="thisform" name="myform" action="nextpage.html">
+			Pardon our appearance while we are performing renovations.</br>
+			A contact form will be uploaded here within the week.
+		</form>
+		</center>
+	</div>
+	<div class="barrier">...</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$('sword input').focus(function(){ 
+		$(this).css({'box-shadow': '10px 10px 10px rgba(50,50,50,.5)', 'transition': 'all 1s'}); 
+		var swordHilt = $(this).parent().children(':first-child'); 
+		swordHilt.css({'box-shadow': '10px 10px 10px rgba(50,50,50,.5)', 'transition': 'all 1s'});
+	});
+	
+	$('sword input').focusout(function(){ 
+		$(this).css({'box-shadow': '2px 2px 2px black', 'transition': 'all 1s'}); 
+		var swordHilt = $(this).parent().children(':first-child'); 
+		swordHilt.css({'box-shadow': '2px 2px 2px black', 'transition': 'all 1s'});
+	});
+	
+	//Hover on/out functions for the dropdown list.
+	//Funny note: Adding size to it turns it into a listbox, 
+	//which is technically a different entity, lol
+	$('#dd').hover(function() { $('#dd').attr('size', 6);
+	}, function() {$('#dd').attr('size', 0); });
+
+	$('#thisform').submit(function() {
+		//Shouldn't let you submit if at least one checkbox isn't checked?	
+		if($('div.checkBoxes :checkbox:checked').length<1)
+		{
+			event.preventDefault();
+			alert('Please checkmark AT LEAST one box BEFORE submitting');
+		} else {
+			//
+
+			<!-- localStorage.setItem('name',); -->
+			<!-- localStorage.setItem('email',); -->
+			<!-- localStorage.setItem('age',); -->
+			<!-- localStorage.setItem('number',); -->
+			<!-- sessionStorage.setItem('formdata', ); -->
+			sessionStorage.setItem('fname',document.getElementById('fname').value );
+			sessionStorage.setItem('email',document.getElementById('email').value );
+			sessionStorage.setItem('age',document.getElementById('age').value );
+			sessionStorage.setItem('number',document.getElementById('number').value );
+			<!-- alert(sessionStorage.getItem('fname')); -->
+			alert('THANK YOU for your submission!!');
+			
+			//	THIS IS WHAT PUTS THE DATA IN SESSION STORAGE
+			<!-- localStorage.setItem('name',); -->
+			<!-- localStorage.setItem('email',); -->
+			<!-- localStorage.setItem('age',); -->
+			<!-- localStorage.setItem('number',); -->
+			<!-- sessionStorage.setItem('formdata',myform); -->
+			<!-- sessionStorage.setItem('fname',fname); -->
+			<!-- sessionStorage.setItem('email',email); -->
+			<!-- sessionStorage.setItem('age',age); -->
+			<!-- sessionStorage.setItem('number',number); -->
+			<!-- sessionStorage.setItem('gender',gender); -->
+			<!-- console.log('aaa gender',sessionStorage.getItem('gender')); -->
+			<!-- alert('aaa gender',sessionStorage.getItem('gender')); -->
+			<!-- console.log(sessionStorage.getItem('formdata')); -->
+			<!-- alert('THANK YOU for your submission!!'); -->
+		}
+	});
+	
+</script>
+
+</body>
+
+<footer>
+</footer>
+
+</html>
