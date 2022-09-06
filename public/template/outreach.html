@@ -1,0 +1,59 @@
+<div class="subdatabody">
+
+	<div class="outreach">
+		<div class="i2">
+			<div class="i3">
+				<div class="i4">
+				</div>
+			</div>
+		</div>  
+		
+		<div id="vid-holder"></div>
+		
+		<div class="o_words">
+			Outreach is more than just handing out fruit...<br /><br />
+			It is more than awaiting blessings from above.<br /> <br />
+			Outreach is connecting. <br /> <br />
+			Finding ways to be active and make a difference in your community.<br /><br />
+			At Sacred Heart, we believe Outreach is a duty we undertake for the betterment of all. <br /><br />
+		</div>
+	</div>	
+
+	<script>
+		
+		$('#vid-holder').load('/template/video.html', function(){
+			$('#video-background').css({opacity:'.25',animation:'none'});
+			$('#vid-holder').css({position:'relative', zIndex:'3', top:'-100%'});
+			<!-- document.querySelector('video').playbackRate = 3; -->
+		});
+	
+		var i2 = $('.i2');
+		var i3 = $('.i3');
+		var i4 = $('.i4');
+		
+		var which = [2,3,4,72];
+		var count = 0;
+		
+		setInterval(function(){ 
+
+			imageSwitch(which[count++]); 
+			if(count>4) count=0;
+			
+		},7500);
+		
+		function imageSwitch(w)
+		{
+			if(w==2) i2.animate({opacity:1},2250);
+			else if(w==3) i3.animate({opacity:1},2250);
+			else if(w==4) i4.animate({opacity:1},2250);
+			else {
+				i2.animate({opacity:0},2250);
+				i3.animate({opacity:0},2250);
+				i4.animate({opacity:0},2250);
+			}
+					
+		}
+		
+		
+	</script>
+</div>
